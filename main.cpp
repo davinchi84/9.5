@@ -14,11 +14,10 @@
 // c) Printing Complex numbers in the form (a, b) , where a is the real part and b is the imag-
 // inary part.
 
-#include <iostream>
-using namespace std;
+#include "Complex.h"
 
 int main()
 {
-    cout<<"say something\n";
-    return 0;
+    Complex a(2,1);
+    Complex b;
 }
