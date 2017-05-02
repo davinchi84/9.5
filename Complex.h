@@ -4,12 +4,11 @@ using namespace std;
 class Complex
 {
   public:
-    Complex(double, double);
+    Complex(double = 0,double = 0);
 
     // function to set complex number
-    void setComplex(int, int);
+    void setComplex(double, double);
     
-
     // function that gets the real part
     double getRealPart();
 
@@ -18,6 +17,12 @@ class Complex
 
     // function that displays Complex number
     void displayComplex();
+
+    // add complex
+    Complex addComplex(Complex);
+
+    // subtract complex
+    Complex subtractComplex(Complex);
 
   private:
     double realPart;

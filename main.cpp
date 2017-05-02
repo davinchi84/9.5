@@ -18,6 +18,14 @@
 
 int main()
 {
-    Complex a(2,1);
-    Complex b;
+    Complex a(2,-1);
+    Complex b(2,3);
+    Complex c;
+
+    a.displayComplex();
+    b.displayComplex();
+
+    c=a.subtractComplex(b);
+
+    c.displayComplex();
 }

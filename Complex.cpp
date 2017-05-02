@@ -1,12 +1,12 @@
 #include "Complex.h"
 
-void Complex::Complex(double Re, double Im)
+Complex::Complex(double Re, double Im)
+    : realPart(Re), imaginaryPart(Im)
 {
-    setComplex(Re,Im);
 }
 
 // function to set complex number
-void Comlex::setComplex(int Re, int Im)
+void Complex::setComplex(double Re, double Im)
 {
     realPart = Re;
     imaginaryPart = Im;
@@ -27,9 +27,50 @@ double Complex::getImaginaryPart()
 // function that displays Complex number
 void Complex::displayComplex()
 {
-    if (imaginaryPart < 0)
-        cout << realPart << " " << imaginaryPart << "*i" << endl;
 
-    else
-        cout << realPart << " +" << imaginaryPart << "*i" << endl;
+    cout << "( " << realPart << ", " << imaginaryPart << " )" << endl;
+}
+
+// add complex
+Complex Complex::addComplex(Complex B)
+{
+    double realA, imaginaryA;
+    double realB, imaginaryB;
+    double realC, imaginaryC;
+
+    realA = getRealPart();           // real part of A
+    imaginaryA = getImaginaryPart(); // imaginary part of A
+
+    realB = B.getRealPart();           // real part of B
+    imaginaryB = B.getImaginaryPart(); // imaginary part of B
+
+    // complex summation
+    realC = realA + realB;
+    imaginaryC = imaginaryA + imaginaryB;
+
+    Complex C(realC, imaginaryC);
+
+    return C;
+}
+
+// subtract complex
+Complex Complex::subtractComplex(Complex B)
+{
+    double realA, imaginaryA;
+    double realB, imaginaryB;
+    double realC, imaginaryC;
+
+    realA = getRealPart();           // real part of A
+    imaginaryA = getImaginaryPart(); // imaginary part of A
+
+    realB = B.getRealPart();           // real part of B
+    imaginaryB = B.getImaginaryPart(); // imaginary part of B
+
+    // complex summation
+    realC = realA - realB;
+    imaginaryC = imaginaryA - imaginaryB;
+
+    Complex C(realC, imaginaryC);
+
+    return C;
 }
