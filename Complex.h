@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+#ifndef COMPLEX_H
+#define COMPLEX_H
+
 class Complex
 {
   public:
@@ -28,3 +31,5 @@ class Complex
     double realPart;
     double imaginaryPart;
 };
+
+#endif
