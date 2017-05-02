@@ -20,12 +20,25 @@ int main()
 {
     Complex a(2,-1);
     Complex b(2,3);
-    Complex c;
+    Complex c, d;
 
+    // display Complex value
+    cout<<"a = ";
     a.displayComplex();
+    cout<<"b = ";
     b.displayComplex();
 
-    c=a.subtractComplex(b);
+    // a+b Complex add
+    c = a.addComplex(b);
 
+    // a-b Complex Subtraction
+    d = a.subtractComplex(b);
+
+    // diplay results
+    cout<<"a + b = ";
     c.displayComplex();
+
+    // diplay results
+    cout<<"a - b = ";
+    d.displayComplex();
 }
